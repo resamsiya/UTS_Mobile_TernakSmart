@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">TernakSmart</string>
+    <string name="welcome_message">Halo, Peternak!</string>
+    <string name="subtitle_dashboard">Pantau perkembangan ternak Anda hari ini.</string>
+    <string name="menu_list_ternak">Daftar Ternak</string>
+    <string name="menu_add_data">Tambah Data</string>
+    <string name="menu_health">Kesehatan</string>
+    <string name="menu_settings">Pengaturan</string>
+    <string name="msg_list_ternak">Membuka Daftar Ternak...</string>
+    <string name="msg_add_data">Membuka Form Tambah Data...</string>
+    <string name="msg_health">Membuka Status Kesehatan...</string>
+    <string name="msg_settings">Membuka Pengaturan...</string>
+
+    <!-- Login Strings -->
+    <string name="login_title">TernakSmart</string>
+    <string name="login_subtitle">Kelola ternak lebih mudah dan efisien</string>
+    <string name="hint_email_username">Email atau Username</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_login">Masuk</string>
+    <string name="forgot_password">Lupa Password?</string>
+    <string name="no_account">Belum punya akun? </string>
+    <string name="register_now">Daftar</string>
+
+    <!-- Vaksin Strings -->
+    <string name="sample_vaksin_name">Vaksin ND-IB</string>
+    <string name="sample_target_umur">Target: Hari ke-4</string>
+    <string name="desc_status_vaksin">Status Vaksinasi</string>
+</resources>

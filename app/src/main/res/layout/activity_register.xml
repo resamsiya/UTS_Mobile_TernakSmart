@@ -1,0 +1,83 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8F5E9"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buat Akun Baru"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="#2E7D32"/>
+
+        <EditText
+            android:id="@+id/etRegName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Lengkap"
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="15dp"/>
+
+        <EditText
+            android:id="@+id/etRegEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="15dp"/>
+
+        <EditText
+            android:id="@+id/etRegFarmName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Peternakan (Contoh: Haotiand Farm)"
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp"
+            android:inputType="text"
+            android:layout_marginBottom="15dp"/>
+
+        <EditText
+            android:id="@+id/etRegPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp"
+            android:inputType="textPassword"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/btnRegisterSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Daftar Sekarang"
+            android:textStyle="bold"
+            android:backgroundTint="#66BB6A"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tvBackToLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sudah punya akun? Login di sini"
+            android:layout_marginTop="25dp"
+            android:textColor="#388E3C"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</ScrollView>

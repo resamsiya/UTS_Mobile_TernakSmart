@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="0dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/ivVaksinIcon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_icon_circle"
+            android:padding="16dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/primary_green" />
+
+        <TextView
+            android:id="@+id/tvNamaVaksin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Nama Vaksin"
+            android:textColor="@color/text_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/tvUmurTernak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Target: 3 Bulan"
+            android:textColor="@color/text_muted"
+            android:textSize="14sp"
+            android:textAlignment="center" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cbStatusVaksin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Status Selesai"
+            app:buttonTint="@color/primary_green" />
+
+        <!-- Indikator status diletakkan di bawah sebagai pemanis -->
+        <View
+            android:id="@+id/statusIndicator"
+            android:layout_width="60dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/primary_light" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
