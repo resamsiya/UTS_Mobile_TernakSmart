@@ -21,8 +21,76 @@
     <string name="no_account">Belum punya akun? </string>
     <string name="register_now">Daftar</string>
 
-    <!-- Vaksin Strings -->
-    <string name="sample_vaksin_name">Vaksin ND-IB</string>
-    <string name="sample_target_umur">Target: Hari ke-4</string>
-    <string name="desc_status_vaksin">Status Vaksinasi</string>
+    <!-- Register Strings -->
+    <string name="register_title">Buat Akun Baru</string>
+    <string name="register_subtitle">Bergabunglah dengan komunitas TernakSmart</string>
+    <string name="hint_full_name">Nama Lengkap</string>
+    <string name="hint_farm_name">Nama Peternakan</string>
+    <string name="btn_register">DAFTAR SEKARANG</string>
+    <string name="already_have_account">Sudah punya akun? Login di sini</string>
+
+    <!-- Main/Dashboard Strings -->
+    <string name="label_total_ternak">Total Ternak</string>
+    <string name="value_total_ternak">1,250 Ekor</string>
+    <string name="label_status">Status</string>
+    <string name="status_very_good">Sangat Baik</string>
+    <string name="status_in_progress">Dalam Proses</string>
+    <string name="status_not_vaccinated">Belum Vaksin</string>
+    <string name="label_menu_navigation">Menu Navigasi</string>
+    <string name="btn_add_data">Tambah Data</string>
+    <string name="btn_view_data">Lihat Data</string>
+    <string name="btn_statistics">Statistik</string>
+    <string name="btn_settings">Pengaturan</string>
+    <string name="hello_user">Halo, %1$s!</string>
+
+    <!-- Lihat Data Strings -->
+    <string name="title_choose_category">Pilih Kategori Data</string>
+    <string name="header_manajemen_vaksin">Manajemen Vaksin</string>
+    <string name="subtitle_choose_data">Pilih data yang ingin Anda kelola</string>
+    <string name="btn_jadwal_vaksinasi">Jadwal Vaksinasi</string>
+    <string name="btn_stok_item_vaksin">Stok dan Item Vaksin</string>
+    <string name="btn_history_ternak">Riwayat Data Pertumbuhan</string>
+
+    <!-- Status Algorithm Strings -->
+    <string name="status_healthy">Kondisi Prima</string>
+    <string name="status_at_risk">Berisiko Sakit</string>
+    <string name="status_needs_care">Butuh Penanganan</string>
+    <string name="prediction_safe">Prediksi 7 Hari: Sehat</string>
+    <string name="prediction_warning">Prediksi 7 Hari: Rawan</string>
+    <string name="label_umur_ternak">Umur Ternak</string>
+    <string name="value_umur_ternak">%1$d Hari</string>
+
+    <!-- Real Vaccine Names -->
+    <string name="vax_nd_ib_tetes">ND-IB (Tetes Mata)</string>
+    <string name="vax_gumboro_1">Gumboro A (Air Minum)</string>
+    <string name="vax_nd_ib_vax">ND-IB (Injeksi/Kill)</string>
+    <string name="vax_ai_h5n1">AI H5N1 (Injeksi)</string>
+    <string name="vax_gumboro_2">Gumboro B (Lanjutan)</string>
+    <string name="vax_nd_lasota">ND Lasota (Booster)</string>
+
+    <!-- Add Data Strings -->
+    <string name="title_add_data">Tambah Data Ternak</string>
+    <string name="subtitle_add_data">Input data pertumbuhan dan foto ternak</string>
+    <string name="hint_nama_hewan">Nama/ID Ternak</string>
+    <string name="hint_berat_badan">Berat Badan (Kg)</string>
+    <string name="btn_take_photo">AMBIL FOTO TERNAK</string>
+    <string name="btn_save_data">SIMPAN DATA TERNAK</string>
+    <string name="msg_photo_captured">Foto berhasil diambil!</string>
+    <string name="msg_data_saved">Data ternak berhasil disimpan!</string>
+    <string name="label_sensor_berat">Monitoring Sensor Berat</string>
+    <string name="status_weight_stable">Sensor Stabil</string>
+    <string name="label_lokasi_ternak">Lokasi Pengambilan Data</string>
+    <string name="status_location_active">GPS Aktif</string>
+    <string name="hint_lokasi_otomatis">Mencari lokasi...</string>
+    <string name="error_location_not_found">Lokasi tidak ditemukan (Cek GPS)</string>
+    <string name="error_location_denied">Izin lokasi ditolak</string>
+
+    <!-- Vaksin Activity Strings -->
+    <string name="title_jadwal_vaksin">Jadwal Vaksinasi</string>
+    <string name="subtitle_jadwal_vaksin">Pantau dan kelola jadwal vaksinasi ternak Anda</string>
+    <string name="btn_save_jadwal">SIMPAN JADWAL VAKSINASI</string>
+    <string name="btn_add">Tambah</string>
+    <string name="title_stok_vaksin">Stok dan Item Vaksin</string>
+    <string name="subtitle_stok_vaksin">Kelola inventaris dan stok vaksin peternakan Anda</string>
+    <string name="btn_save_stok">SIMPAN PERUBAHAN STOK</string>
 </resources>

@@ -2,10 +2,26 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Material 3 Primary Green Palette - Vibrant & Full -->
     <color name="primary_green">#1B5E20</color>
-    <color name="primary_light">#4CAF50</color>
-    <color name="accent_gold">#FFD700</color>
-    <color name="bg_light">#F8F9FA</color>
-    <color name="text_dark">#212529</color>
-    <color name="text_muted">#6C757D</color>
+    <color name="primary_dark">#003300</color>
+    <color name="primary_light">#4C8C4A</color>
+    <color name="primary_container">#C8E6C9</color>
+    <color name="on_primary_container">#002106</color>
+
+    <!-- Accents -->
+    <color name="accent_gold">#FFD600</color>
+    <color name="accent_orange">#F57C00</color>
+    <color name="secondary_accent">#00897B</color>
+
+    <!-- Surface & Background -->
+    <color name="bg_light">#F1F8E9</color>
+    <color name="surface_white">#FFFFFF</color>
+    <color name="text_dark">#1B1B1B</color>
+    <color name="text_muted">#555555</color>
+    <color name="stroke_color">#C5E1A5</color>
+    <color name="error_red">#D32F2F</color>
+    <color name="header_text_color">#FFFFFF</color>
+    <color name="background_color">#F1F8E9</color>
 </resources>

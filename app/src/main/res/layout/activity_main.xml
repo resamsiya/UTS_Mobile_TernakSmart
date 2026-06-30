@@ -22,7 +22,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/primary_green"
+                android:background="@drawable/bg_gradient"
                 android:padding="24dp">
 
                 <TextView
@@ -30,8 +30,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
-                    android:text="Halo, Peternak!"
-                    android:textColor="#E0E0E0"
+                    android:text="@string/welcome_message"
+                    android:textColor="@color/header_text_color"
+                    android:alpha="0.8"
                     android:textSize="16sp" />
 
                 <TextView
@@ -39,18 +40,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tvWelcome"
-                    android:text="TernakSmart"
-                    android:textColor="@android:color/white"
+                    android:text="@string/app_name"
+                    android:textColor="@color/header_text_color"
                     android:textSize="32sp"
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:alpha="0.2"
-                    android:src="@drawable/ic_launcher_foreground" />
+                    android:alpha="0.4"
+                    android:src="@drawable/ic_app_logo" />
             </RelativeLayout>
 
             <androidx.appcompat.widget.Toolbar
@@ -67,6 +68,8 @@
         android:layout_marginTop="-32dp"
         android:background="@drawable/bg_top_corner_radius"
         android:elevation="4dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
@@ -79,57 +82,132 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="2dp"
-                app:strokeWidth="0dp">
+                android:layout_marginBottom="28dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/stroke_color"
+                app:cardBackgroundColor="@color/surface_white">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="20dp"
-                    android:weightSum="2">
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Total Ternak"
-                            android:textSize="12sp"
-                            android:textColor="@color/text_muted" />
-                        <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_total_ternak"
+                                android:textSize="13sp"
+                                android:letterSpacing="0.05"
+                                android:textColor="@color/text_muted" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/value_total_ternak"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_dark" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/stroke_color" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="1,250 Ekor"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/text_dark" />
+                            android:layout_weight="1"
+                            android:paddingStart="20dp"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_umur_ternak"
+                                android:textSize="13sp"
+                                android:letterSpacing="0.05"
+                                android:textColor="@color/text_muted" />
+                            <TextView
+                                android:id="@+id/tvUmurTernak"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="12 Hari"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_dark" />
+                        </LinearLayout>
                     </LinearLayout>
 
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="@color/stroke_color" />
+
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Status Kesehatan"
-                            android:textSize="12sp"
-                            android:textColor="@color/text_muted" />
-                        <TextView
-                            android:id="@+id/tvStatusKesehatan"
-                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/label_status"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_muted" />
+                            <TextView
+                                android:id="@+id/tvStatusKesehatan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/status_healthy"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/primary_green" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Sangat Baik"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/primary_light" />
+                            android:layout_weight="1.2"
+                            android:orientation="vertical"
+                            android:paddingStart="8dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Analisis AI TernakSmart"
+                                android:textSize="11sp"
+                                android:textColor="@color/secondary_accent"
+                                android:textStyle="italic" />
+                            <TextView
+                                android:id="@+id/tvPrediksiKesehatan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/prediction_safe"
+                                android:textSize="14sp"
+                                android:textColor="@color/text_dark" />
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -138,10 +216,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:text="Menu Utama"
+                android:text="@string/label_menu_navigation"
                 android:textColor="@color/text_dark"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:letterSpacing="-0.01" />
 
             <!-- Menu Grid -->
             <GridLayout
@@ -154,70 +233,86 @@
                 <!-- Tombol: Tambah Data -->
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnAddData"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button.TonalButton"
                     android:layout_width="0dp"
-                    android:layout_height="140dp"
+                    android:layout_height="150dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_margin="8dp"
-                    android:text="Tambah Data"
+                    android:text="@string/btn_add_data"
                     android:textColor="@color/text_dark"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:stateListAnimator="@animator/button_press_scale"
                     app:icon="@android:drawable/ic_input_add"
                     app:iconGravity="top"
-                    app:iconSize="40dp"
+                    app:iconPadding="16dp"
+                    app:iconSize="48dp"
                     app:iconTint="#2196F3"
-                    app:cornerRadius="16dp" />
+                    app:cornerRadius="28dp" />
 
-                <!-- Tombol: Vaksinasi -->
+                <!-- Tombol: Lihat Data -->
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnVaksin"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    android:id="@+id/btnLihatData"
+                    style="@style/Widget.Material3.Button.TonalButton"
                     android:layout_width="0dp"
-                    android:layout_height="140dp"
+                    android:layout_height="150dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_margin="8dp"
-                    android:text="Vaksinasi"
+                    android:text="@string/btn_view_data"
                     android:textColor="@color/text_dark"
-                    app:icon="@android:drawable/ic_menu_agenda"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:stateListAnimator="@animator/button_press_scale"
+                    app:icon="@android:drawable/ic_menu_search"
                     app:iconGravity="top"
-                    app:iconSize="40dp"
+                    app:iconPadding="16dp"
+                    app:iconSize="48dp"
                     app:iconTint="#FF9800"
-                    app:cornerRadius="16dp" />
+                    app:cornerRadius="28dp" />
 
                 <!-- Tombol: Statistik -->
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnStats"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button.TonalButton"
                     android:layout_width="0dp"
-                    android:layout_height="140dp"
+                    android:layout_height="150dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_margin="8dp"
-                    android:text="Statistik"
+                    android:text="@string/btn_statistics"
                     android:textColor="@color/text_dark"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:stateListAnimator="@animator/button_press_scale"
                     app:icon="@android:drawable/ic_menu_sort_by_size"
                     app:iconGravity="top"
-                    app:iconSize="40dp"
+                    app:iconPadding="16dp"
+                    app:iconSize="48dp"
                     app:iconTint="#9C27B0"
-                    app:cornerRadius="16dp" />
+                    app:cornerRadius="28dp" />
 
                 <!-- Tombol: Pengaturan -->
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnSettings"
-                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    style="@style/Widget.Material3.Button.TonalButton"
                     android:layout_width="0dp"
-                    android:layout_height="140dp"
+                    android:layout_height="150dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_margin="8dp"
-                    android:text="Pengaturan"
+                    android:text="@string/btn_settings"
                     android:textColor="@color/text_dark"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:stateListAnimator="@animator/button_press_scale"
                     app:icon="@android:drawable/ic_menu_manage"
                     app:iconGravity="top"
-                    app:iconSize="40dp"
+                    app:iconPadding="16dp"
+                    app:iconSize="48dp"
                     app:iconTint="#607D8B"
-                    app:cornerRadius="16dp" />
+                    app:cornerRadius="28dp" />
 
             </GridLayout>
 

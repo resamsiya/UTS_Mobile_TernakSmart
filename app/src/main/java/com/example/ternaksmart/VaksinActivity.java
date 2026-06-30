@@ -3,10 +3,16 @@ package com.example.ternaksmart;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.button.MaterialButton;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,11 +28,18 @@ public class VaksinActivity extends AppCompatActivity {
         setContentView(R.layout.activity_vaksin);
 
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+            if (getSupportActionBar() != null) {
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            }
+            toolbar.setNavigationOnClickListener(v -> finish());
         }
-        toolbar.setNavigationOnClickListener(v -> onBackPressed());
+
+        // Animasi Masuk
+        findViewById(android.R.id.content).startAnimation(
+                android.view.animation.AnimationUtils.loadAnimation(this, R.anim.fade_in_up)
+        );
 
         rvVaksin = findViewById(R.id.rvVaksin);
         rvVaksin.setLayoutManager(new LinearLayoutManager(this));
@@ -35,6 +48,13 @@ public class VaksinActivity extends AppCompatActivity {
 
         adapter = new VaksinAdapter(vaksinList);
         rvVaksin.setAdapter(adapter);
+
+        MaterialButton btnSimpan = findViewById(R.id.btnSimpanJadwal);
+        btnSimpan.setOnClickListener(v -> {
+            saveVaksinProgress();
+            Toast.makeText(this, "Data Jadwal Vaksin Berhasil Disimpan!", Toast.LENGTH_SHORT).show();
+            finish(); // Sesuai flowchart: Selesai (End) dan kembali
+        });
     }
 
     @Override
@@ -58,10 +78,12 @@ public class VaksinActivity extends AppCompatActivity {
 
     private void prepareData() {
         vaksinList = new ArrayList<>();
-        // Mengambil data awal atau dari database (simulasi)
-        vaksinList.add(new Vaksin("Vaksin ND-IB (Tetes)", "Hari ke-4", false));
-        vaksinList.add(new Vaksin("Vaksin Gumboro", "Hari ke-7", false));
-        vaksinList.add(new Vaksin("Vaksin AI", "Hari ke-10", false));
-        vaksinList.add(new Vaksin("Vaksin ND-IB (Minum)", "Hari ke-18", false));
+        // Menggunakan nama vaksin nyata dan jadwal hari yang umum dalam peternakan ayam/ternak
+        vaksinList.add(new Vaksin(getString(R.string.vax_nd_ib_tetes), 4, false));
+        vaksinList.add(new Vaksin(getString(R.string.vax_gumboro_1), 7, false));
+        vaksinList.add(new Vaksin(getString(R.string.vax_nd_ib_vax), 10, false));
+        vaksinList.add(new Vaksin(getString(R.string.vax_ai_h5n1), 14, false));
+        vaksinList.add(new Vaksin(getString(R.string.vax_gumboro_2), 18, false));
+        vaksinList.add(new Vaksin(getString(R.string.vax_nd_lasota), 28, false));
     }
 }

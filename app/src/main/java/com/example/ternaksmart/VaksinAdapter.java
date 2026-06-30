@@ -32,7 +32,7 @@ public class VaksinAdapter extends RecyclerView.Adapter<VaksinAdapter.VaksinView
 
         // Set data ke view
         holder.tvNamaVaksin.setText(vaksin.getNama());
-        holder.tvUmurTernak.setText("Target: " + vaksin.getTargetUmur());
+        holder.tvUmurTernak.setText("Target: " + vaksin.getTargetUmurFormatted());
         holder.cbStatusVaksin.setChecked(vaksin.isDone());
 
         // Update warna indikator berdasarkan status

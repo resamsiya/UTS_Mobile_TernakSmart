@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_light">#121411</color>
+    <color name="surface_white">#1A1C19</color>
+    <color name="text_dark">#E1E3DC</color>
+    <color name="text_muted">#C0C9BE</color>
+    <color name="stroke_color">#424940</color>
+    <color name="primary_green">#86D990</color> <!-- Lighter green for dark mode -->
+    <color name="primary_light">#B1F4B3</color>
+    <color name="primary_container">#00531A</color>
+    <color name="header_text_color">#121411</color> <!-- Dark text for light-green headers in dark mode -->
+    <color name="background_color">#121411</color>
+</resources>
